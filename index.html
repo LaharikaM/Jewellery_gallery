@@ -48,24 +48,23 @@ border-radius:4px;
 
 <script>
 
-const totalImages = 7;
+const totalImages = 7; // how many you uploaded
 
 const gallery = document.getElementById("gallery");
 
 for(let i=1;i<=totalImages;i++){
 
-const div=document.createElement("div");
-div.className="item";
+  const div=document.createElement("div");
+  div.className="item";
 
-div.innerHTML=`
-<span class="num">${i}</span>
-<img src="img${i}.jpg">
-`;
+  div.innerHTML=`
+    <span class="num">${i}</span>
+    <img src="${i}.jpeg">
+  `;
 
-gallery.appendChild(div);
-
+  gallery.appendChild(div);
 }
-
+  
 </script>
 
 </body>
