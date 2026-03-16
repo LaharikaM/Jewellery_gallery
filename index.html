@@ -1,1 +1,72 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Earring Collection</title>
+
+<style>
+body{
+font-family:Arial;
+background:#f5f5f5;
+padding:20px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+gap:15px;
+}
+
+.item{
+position:relative;
+}
+
+.item img{
+width:100%;
+border-radius:8px;
+}
+
+.num{
+position:absolute;
+top:6px;
+left:6px;
+background:black;
+color:white;
+font-weight:bold;
+padding:4px 8px;
+border-radius:4px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Earring Collection</h2>
+
+<div class="gallery" id="gallery"></div>
+
+<script>
+
+const totalImages = 30;
+
+const gallery = document.getElementById("gallery");
+
+for(let i=1;i<=totalImages;i++){
+
+const div=document.createElement("div");
+div.className="item";
+
+div.innerHTML=`
+<span class="num">${i}</span>
+<img src="img${i}.jpg">
+`;
+
+gallery.appendChild(div);
+
+}
+
+</script>
+
+</body>
+</html>
